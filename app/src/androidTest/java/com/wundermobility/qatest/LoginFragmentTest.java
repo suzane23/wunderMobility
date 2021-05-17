@@ -272,6 +272,8 @@ public class LoginFragmentTest {
     private String getText(int iD) {
 
         TextView textView = activityTestRule.getActivity().findViewById(iD);
+        textView.setText(R.string.button_login_text);
+
         String text = textView.getText().toString();
         return text;
     }
