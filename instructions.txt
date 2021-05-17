@@ -1,0 +1,47 @@
+Hey!
+
+When first running the app, you will realize that the map will not show up since the Google Maps key is missing.
+On your Logcat an error like this will appear:
+Android Application (<cert_fingerprint>;<package_name>): XX:F3:74:E4:47:07:E9:9B:84:DB:C1:28:38:23:AD:84:70:DD:D5:YY;com.wundermobility.qatest
+
+You have then to create an Google Maps API Key with this data.
+You can do that by changing YOUR_CERT_FINGERPRINT_HERE in the link below, for the one found in the Logcat .
+https://console.cloud.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=YOUR_CERT_FINGERPRINT_HERE;com.wundermobility.qatest
+
+For instance for the example below would be:
+https://console.cloud.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=XX:F3:74:E4:47:07:E9:9B:84:DB:C1:28:38:23:AD:84:70:DD:D5:YY;com.wundermobility.qatest
+
+Or alternatively in https://console.cloud.google.com/apis
+
+Create a new project and setup the API Key.
+
+With the API Key created.
+Go to /app/src/main/res/values/keys.xml
+Paste the key within google_maps_key tags.
+
+Run the project and you should be able to see the map!
+
+Good luck with your task!
+
+------------------------------------------------------------------------------------------------------------------------
+APP STRUCTURE
+
+Login screen
+- Credentials: qatest@wundermobility.com / 12345678
+- Invalid login credentials shows an error message
+
+Map screen
+- Six vehicle markers are on the map
+- There are two buttons on the top right corner of the map, they are:
+- - Locate Selected Vehicle: When a vehicle is selected on the map and you navigate away from it, when tapping this button, should navigate you back to the selected vehicle. If there's no selected vehicle, the button should be disabled.
+- - Nearby Vehicles List: this will open a new activity with a list of vehicles on the map.
+
+- When a vehicle is marker is tapped, a vehicle is selected and its data is shown. One can take the following actions on the card:
+- - Rent Vehicle: if there's no ongoing rental
+- - End Rent: if there's an ongoing rental. The information on total rides taken for this vehicle should be updated in the card.
+- - Go to Rented Vehicle: if there's an ongoing rental and a different vehicle from the rented one is selected. This will navigate back to the currently rented vehicle.
+- - Close the card, deselecting a vehicle by pressing the X icon at the top right.
+
+Nearby Vehicles List screen
+- List of the details for the vehicles shown on the map.
+- When an item list is tapped a dialog with the same details for the vehicle should then be shown.

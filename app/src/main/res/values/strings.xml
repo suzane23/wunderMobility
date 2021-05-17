@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">QA Test</string>
+
+    <string name="button_login_text">Login</string>
+    <string name="edit_text_login_email_hint">E-mail</string>
+    <string name="edit_text_login_password_hint">Password</string>
+    <string name="text_view_login_invalid_credentials_error">Invalid credentials! Please check your data.</string>
+    <string name="text_view_login_label">Login</string>
+    <string name="button_map_locate_vehicle_text">Locate Vehicle</string>
+    <string name="button_map_open_vehicle_text">Open Vehicle</string>
+    <string name="button_map_nearby_vehicles_text">Nearby Vehicles</string>
+    <string name="button_card_vehicle_rides_text">Rides: %1$d</string>
+    <string name="button_card_vehicle_go_to_rented_vehicle_text">Go To Rented Vehicle</string>
+    <string name="button_card_vehicle_rent_vehicle_text">Rent Vehicle</string>
+    <string name="button_card_vehicle_end_rent_text">End Rent</string>
+</resources>
